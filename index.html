@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login page</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- Left side image carousel -->
+    <div class="left-pane">
+      <div class="carousel">
+        <img src="pics/all.png" alt="Smiling kids" class="active" />
+        <img src="pics/cleaner.jpg" alt="Disease awareness" />
+        <img src="pics/streat1.jpg" alt="Disease awareness" />
+        <img src="pics/garbage.jpg" alt="Disease awareness" />
+        <img src="pics/fire.jpg" alt="Disease awareness" />
+        <img src="pics/streat2.jpg" alt="Disease awareness" />
+        <img src="pics/garbage2.jpg" alt="Disease awareness" />
+      </div>
+    </div>
+
+    <!-- Right side login form -->
+    <div class="right-pane">
+      <div class="form-box">
+        <div class="logos">
+          <img src="/jansetu_Prototype/images/mohua-logo.png" alt="Government of India" class="gov-logo"/>
+        </div>
+
+
+  <h2 class="jansetu-heading">जनसेतु</h2>
+
+        <div class="user-type">
+          <label><input type="radio" name="userType" value="official" checked /> Officials</label>
+          <label><input type="radio" name="userType" value="assessor" /> Assessors</label>
+        </div>
+
+        <form>
+          <label>User ID</label>
+          <input type="text" placeholder="Enter User ID" required />
+
+          <label>Password</label>
+          <div class="password-wrap">
+            <input type="password" placeholder="Enter Password" required />
+            <span class="toggle-pwd">👁️</span>
+          </div>
+
+          <label>Captcha</label>
+          <div class="captcha-wrap">
+            <input type="text" placeholder="Enter Captcha" required />
+            <span class="captcha-img">qakyxy</span>
+            <button type="button" class="refresh">⟳</button>
+          </div>
+
+          <button type="submit" class="btn-submit">Sign In</button>
+        </form>
+
+        <div class="links">
+          <a href="#">Forgot Password?</a>
+          <a href="#">Login Instructions</a>
+          <a href="#">User Manual</a>
+        </div>
+
+        <div class="footer-text">
+          जनसेतु<br/>
+          <button class="btn-download">Download Guidelines</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating vertical button -->
+    <a href="#" class="sbmu-button">जनसेतु</a>
+  </div>
+
+  <script>
+    // Toggle carousel images
+    let idx = 0;
+    const slides = document.querySelectorAll('.carousel img');
+    setInterval(() => {
+      slides[idx].classList.remove('active');
+      idx = (idx + 1) % slides.length;
+      slides[idx].classList.add('active');
+    }, 4000);
+
+    // Toggle password visibility
+    document.querySelector('.toggle-pwd').addEventListener('click', () => {
+      const pwd = document.querySelector('input[type="password"], input[type="text"]');
+      const type = pwd.getAttribute('type') === 'password' ? 'text' : 'password';
+      pwd.setAttribute('type', type);
+    });
+  </script>
+</body>
+</html>
