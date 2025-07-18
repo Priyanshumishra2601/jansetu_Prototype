@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register - Jan Setu</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- Left Image Carousel -->
+    <div class="left-pane">
+      <div class="carousel">
+        <div class="slide-track">
+          <img src="pics/all.png" alt="Slide 1">
+          <img src="pics/cleaner.jpg" alt="Slide 2">
+          <img src="pics/streat1.jpg" alt="Slide 3">
+          <img src="pics/garbage.jpg" alt="Slide 4">
+          <img src="pics/fire.jpg" alt="Slide 5">
+          <img src="pics/streat2.jpg" alt="Slide 6">
+          <img src="pics/garbage2.jpg" alt="Slide 7">
+          <img src="pics/all.png" alt="Slide 1 Clone"> <!-- for seamless loop -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Registration Form -->
+    <div class="right-pane">
+      <div class="form-box">
+        <div class="logos">
+          <img src="/jansetu_Prototype/images/mohua-logo.png" alt="Gov Logo" class="gov-logo">
+        </div>
+
+        <h2 class="jansetu-heading">जनसेतु</h2>
+
+        <form>
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter your full name" required>
+
+          <label>Mobile Number</label>
+          <input type="text" placeholder="Enter mobile number" required>
+
+          <label>Email ID</label>
+          <input type="email" placeholder="Enter email (optional)">
+
+          <label>Password</label>
+          <div class="password-wrap">
+            <input type="password" placeholder="Create password" required>
+            <span class="toggle-pwd">👁️</span>
+          </div>
+
+          <label>Confirm Password</label>
+          <input type="password" placeholder="Re-enter password" required>
+
+          <label>Captcha</label>
+          <div class="captcha-wrap">
+            <input type="text" placeholder="Enter Captcha" required>
+            <span class="captcha-img">n9fjks</span>
+            <button type="button" class="refresh">⟳</button>
+          </div>
+
+          <button type="submit" class="btn-submit">Register</button>
+        </form>
+
+        <div class="links">
+          <a href="index.html">Already have an account? Sign in</a>
+        </div>
+      </div>
+    </div>
+
+    <a href="#" class="sbmu-button">जनसेतु</a>
+  </div>
+
+  <script>
+    // Sliding Carousel
+    let idx = 0;
+    const track = document.querySelector('.slide-track');
+    const slides = document.querySelectorAll('.slide-track img');
+    const totalSlides = slides.length;
+
+    setInterval(() => {
+      idx++;
+      track.style.transition = "transform 0.5s ease-in-out";
+      track.style.transform = `translateX(-${idx * 700}px)`;
+
+      if (idx === totalSlides - 1) {
+        setTimeout(() => {
+          track.style.transition = "none";
+          idx = 0;
+          track.style.transform = `translateX(0)`;
+        }, 500);
+      }
+    }, 4000);
+
+    // Password toggle
+    document.querySelector('.toggle-pwd').addEventListener('click', () => {
+      const pwd = document.querySelector('input[type="password"]');
+      const type = pwd.getAttribute('type') === 'password' ? 'text' : 'password';
+      pwd.setAttribute('type', type);
+    });
+  </script>
+</body>
+</html>
