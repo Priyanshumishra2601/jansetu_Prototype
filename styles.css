@@ -5,7 +5,14 @@ body, html { height: 100%;
  }
 a { text-decoration: none; color: #2980b9; }
 button { cursor: pointer; }
-
+ 
+  .main{
+  background-image: url('pics/map.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}
 
 .jansetu-heading {
       font-size: 48px;
