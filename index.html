@@ -36,42 +36,75 @@
 
   <h2 class="jansetu-heading">जनसेतु</h2>
 
-        <div class="user-type">
-          <label><input type="radio" name="userType" value="official" checked /> Officials</label>
-          <label><input type="radio" name="userType" value="assessor" /> Assessors</label>
-        </div>
+        <!-- Login Form -->
+<div id="loginForm">
+  <form>
+    <label>Phone No.</label>
+    <input type="text" placeholder="Enter Phone No." required />
 
-        <form>
-          <label>User ID</label>
-          <input type="text" placeholder="Enter User ID" required />
+    <label>Password</label>
+    <div class="password-wrap">
+      <input type="password" placeholder="Enter Password" required />
+      <span class="toggle-pwd">👁️</span>
+    </div>
 
-          <label>Password</label>
-          <div class="password-wrap">
-            <input type="password" placeholder="Enter Password" required />
-            <span class="toggle-pwd">👁️</span>
-          </div>
+    <label>Captcha</label>
+    <div class="captcha-wrap">
+      <input type="text" placeholder="Enter Captcha" required />
+      <span class="captcha-img">qakyxy</span>
+      <button type="button" class="refresh">⟳</button>
+    </div>
 
-          <label>Captcha</label>
-          <div class="captcha-wrap">
-            <input type="text" placeholder="Enter Captcha" required />
-            <span class="captcha-img">qakyxy</span>
-            <button type="button" class="refresh">⟳</button>
-          </div>
+    <button type="submit" class="btn-submit">Sign In</button>
+  </form>
+  <div class="links">
+    <a href="#" onclick="toggleForm('register')">Don’t have an account? Register here</a>
+  </div>
+</div>
 
-          <button type="submit" class="btn-submit">Sign In</button>
-        </form>
+<!-- Register Form -->
+<div id="registerForm" style="display: none;">
+  <form>
+    <label>Full Name</label>
+    <input type="text" placeholder="Enter your full name" required>
 
-        <div class="links">
-          <a href="#">Forgot Password?</a>
-          <a href="#">Login Instructions</a>
-          <a href="#">User Manual</a>
-        </div>
+    <label>Mobile Number</label>
+    <input type="text" placeholder="Enter mobile number" required>
 
-        <div class="footer-text">
+    <label>Email ID</label>
+    <input type="email" placeholder="Enter email (optional)">
+
+    <label>Password</label>
+    <div class="password-wrap">
+      <input type="password" placeholder="Create password" required>
+      <span class="toggle-pwd">👁️</span>
+    </div>
+
+    <label>Confirm Password</label>
+    <input type="password" placeholder="Re-enter password" required>
+
+    <!-- <label>Captcha</label>
+    <div class="captcha-wrap">
+      <input type="text" placeholder="Enter Captcha" required>
+      <span class="captcha-img">n9fjks</span>
+      <button type="button" class="refresh">⟳</button>
+    </div> -->
+
+    <button type="submit" class="btn-submit">Register</button>
+  </form>
+  <div class="links">
+    <a href="#" onclick="toggleForm('login')">Already have an account? Sign in</a>
+  </div>
+</div>
+
+
+        <!-- <div class="footer-text">
           जनसेतु<br/>
           <button class="btn-download">Download Guidelines</button>
         </div>
-      </div>
+      </div> -->
+
+</div>
     </div>
 
     <!-- Floating vertical button -->
@@ -111,6 +144,21 @@ setInterval(() => {
       const type = pwd.getAttribute('type') === 'password' ? 'text' : 'password';
       pwd.setAttribute('type', type);
     });
+
+    // Toggle between login and register forms
+    function toggleForm(formType) {
+  const login = document.getElementById('loginForm');
+  const register = document.getElementById('registerForm');
+
+  if (formType === 'register') {
+    login.style.display = 'none';
+    register.style.display = 'block';
+  } else {
+    login.style.display = 'block';
+    register.style.display = 'none';
+  }
+}
+
   </script>
 </body>
 </html>
