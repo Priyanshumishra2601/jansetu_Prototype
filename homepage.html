@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JanSetu</title>
+  <link rel="stylesheet" href="homepage.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <div class="inclined-bg"></div>
+
+    <header>
+      <div class="logo">🇮🇳 JanSetu</div>
+      <!-- Hamburger Icon -->
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+  <!-- Nav Links -->
+  <nav id="nav-links">
+    <a href="#">Home</a>
+    <a href="#index.html">Register/Login</a>
+    <a href="#">View Complaints</a>
+    <a href="#">Contact/Help</a>
+  </nav>
+    </header>
+
+    <main>
+      <h1>CONNECTING CITIZENS TO <br /><span>RESOLVE CIVIC ISSUES</span></h1>
+      <p>Report civic problems in your locality and track their resolution status through our platform.</p>
+
+      <div class="stats">
+        <div class="stat">
+          <span>✔️ 230</span>
+          <p>Issues Resolved</p>
+        </div>
+        <div class="stat">
+          <span>👤 875</span>
+          <p>Registered Users</p>
+        </div>
+        <div class="stat">
+          <span>⚠️ 120</span>
+          <p>Pending Issues</p>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="report">Report an Issue</button>
+        <button class="view">View Complaints</button>
+      </div>
+    </main>
+  </div>
+
+  <script>
+  const toggleBtn = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  toggleBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+
+</body>
+</html>
