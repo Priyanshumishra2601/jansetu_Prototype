@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body, html {
@@ -18,19 +18,6 @@ body, html {
   overflow: hidden;
 }
 
-/* Inclined saffron background */
-
-/* .inclined-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #FF9933; /* India Saffron
-  clip-path: polygon(0 0, 50% 100%, 0 100%);
-  z-index: 0;
-} */
-
 .custom-shape {
     position: absolute;
     bottom: 0;
@@ -39,8 +26,7 @@ body, html {
     overflow: hidden;
     line-height: 0;
 }
-
-.custom-shape svg {
+ .custom-shape svg{
     position: relative;
     display: block;
     width: calc(163% + 1.3px);
@@ -49,7 +35,7 @@ body, html {
 }
 
 .custom-shape .shape-fill {
-    fill: #FF9933;
+    fill: #b089ff;
 }
 
 /** For mobile devices **/
@@ -63,6 +49,7 @@ body, html {
 
 .map{
   position: absolute;
+  width: 500px-47;
   height : 100%;
   display: flex;
   top: 0;
@@ -85,7 +72,7 @@ header {
 
 .logo {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 60;
   color: #000;
 }
 
@@ -110,33 +97,37 @@ main {
 }
 
 main h1 {
-  font-size: 40px;
+  font-size: 75px;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 20px;
-}
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  text-align: left;
+  padding-left: 15%;
 
-main h1 span {
-  color: #138808; /* India Green */
 }
 
 main p {
-  font-size: 18px;
-  max-width: 600px;
+  font-size: 25px;
   margin: 0 auto 40px auto;
+  font-weight: 500;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  text-align: left;
+  padding-left: 15%;
 }
 
 .stats {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 100px;
   flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
 .stat {
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px 30px;
+  padding: 10px 100px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
@@ -149,7 +140,7 @@ main p {
 }
 
 .stat p {
-  font-size: 14px;
+  font-size: 10px;
 }
 
 .buttons {
@@ -167,20 +158,22 @@ button {
   cursor: pointer;
   transition: 0.3s;
   color: white;
+  font-weight: 300;
   
 }
 
 .report {
-  background-color: #e98c2f; /* India Saffron */
-  box-shadow: 0 0px 6px rgba(255, 173, 91, 2);
-  border: 2px solid #cf7c28;
+  background-color: #8d33c7; /* India Saffron */
+  box-shadow: 0 0px 6px rgba(255, 255, 255, 2);
+  border: 2px solid #5921b5;
   
 }
 
 .view {
-  background-color: #138808; /* India Green */
-  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.75);
-  border: 1.75px solid #116409;
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.5);
+  border: 1.75px solid #5921b5;
+  color: #5921b5;
+
 }
 
 button:hover {
